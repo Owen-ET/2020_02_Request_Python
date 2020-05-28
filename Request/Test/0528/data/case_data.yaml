@@ -1,0 +1,18 @@
+case01:
+  url: https://ascendas.17mine.cn/basic/pick/selectPage
+  headers:
+    Authorization: eyJhbGciOiJIUzI1NiJ9.eyJuZWVkRWRpdCI6LTEsImxvZ2luVGltZSI6MTU5MDYyOTYwMTU0NSwibG9naW5XYXkiOjEsInVzZXJOYW1lIjoi5byg55WFIiwidXNlcklkIjoiMTI1NDI5NDE4NzAzODM0NzI2NCIsImxvZ2luU291cmNlIjotMSwiYWNjb3VudCI6IjEzNjQyMDQwNjMxIiwiZXhwIjoxNTkwNjcyODAxfQ.qydhemA3sGfrBuHFWcTi8OdaOcm7hvIpgErtkQ2OVBo
+  payload:
+    pageNum: 1
+    #模拟器
+    pageSize: 1
+    user_id: 1254294187038347264
+    userId: 1254294187038347264
+    infos_id: 1207504682260500480
+    infoId: 1207504682260500480
+
+
+case02:
+  url: https://www.v2ex.com/api/nodes/show.json
+  payload:
+    name: python
