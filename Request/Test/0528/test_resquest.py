@@ -25,6 +25,7 @@ class TestResquest(unittest.TestCase):
 
     # @unittest.skip("不看")
     def test_request01(self):
+        '''一般yaml方法'''
         #==========================旧传参写法========================
         # url = 'https://ascendas.17mine.cn/basic/pick/selectPage'
         # headers = {'Authorization':'eyJhbGciOiJIUzI1NiJ9.eyJuZWVkRWRpdCI6LTEsImxvZ2luVGltZSI6MTU5MDYyOTYwMTU0NSwibG9naW5XYXkiOjEsInVzZXJOYW1lIjoi5byg55WFIiwidXNlcklkIjoiMTI1NDI5NDE4NzAzODM0NzI2NCIsImxvZ2luU291cmNlIjotMSwiYWNjb3VudCI6IjEzNjQyMDQwNjMxIiwiZXhwIjoxNTkwNjcyODAxfQ.qydhemA3sGfrBuHFWcTi8OdaOcm7hvIpgErtkQ2OVBo'}
@@ -47,14 +48,20 @@ class TestResquest(unittest.TestCase):
         self.assertEqual(r['data']['records'][0]['stockOutName'],"0506测试仓库")
 
     # @unittest.skipIf(2>1,"大于不执行")
-    def test_request02(self):
-        url = 'https://www.v2ex.com/api/nodes/show.json'
-        payload = {"name":"python"}
+    @file_data('./data/case_data.yaml')
+    @unpack
+    def test_request02(self,**kwargs):
+        '''DDT数据驱动yaml方法'''
+        url = kwargs['url']
+        payload = kwargs['payload']
+        # url = 'https://www.v2ex.com/api/nodes/show.json'
+        # payload = {"name":"python"}
         r = requests.get(url,params=payload).json()
-        self.assertEqual(r['id'],901)
+        self.assertEqual(r['id'],90)
 
     # @unittest.skip("不看")
     def test_request03(self):
+        '''无yaml方法'''
         url = "https://www.v2ex.com/api/nodes/show.json"
         querystring = {"name": "python"}
         response = requests.request("GET", url, params=querystring).json()
