@@ -28,71 +28,71 @@ def getNewReport(report_url):
     return newReport
 
 
-def sendMail(report_path):
-    '''发送报告'''
-    sendmail = 'zhangchanget@126.com'
-    sendpswd = 'XXX'
-    receivemail = '943102912@qq.com'
-
-    # 连接邮箱服务器
-    yag = yagmail.SMTP(user=sendmail, password=sendpswd, host='smtp.126.com')
-    # ②发送html邮件正文
-    # 读取邮件模板
-    # file_object = open(newReport)
-    # try:
-    #     contentsbody = file_object.read()
-    # finally:
-    #     file_object.close()
-    # contents = contentsbody
-    contents = ["发送邮件"]
-
-    # 附件地址
-    fujian = [report_path]
-    # 发送邮件附件
-    yag.send(receivemail,'《自动化报告》', contents, fujian)
-    yag.close()
-
-
-
-# def sendMail(newReport,report_name):
-#     '''
-#     ①普通发送邮件
-#     :param newReport:
-#     :param report_name:
-#     :return:
-#     '''
-#     sendMail = 'zhangchanget@126.com'
+# def sendMail(report_path):
+#     '''发送报告'''
+#     sendmail = 'zhangchanget@126.com'
 #     sendpswd = 'XXX'
-#     receiveMail = '943102912@qq.com'
+#     receivemail = '943102912@qq.com'
 #
+#     # 连接邮箱服务器
+#     yag = yagmail.SMTP(user=sendmail, password=sendpswd, host='smtp.126.com')
+#     # ②发送html邮件正文
+#     # 读取邮件模板
+#     # file_object = open(newReport)
+#     # try:
+#     #     contentsbody = file_object.read()
+#     # finally:
+#     #     file_object.close()
+#     # contents = contentsbody
+#     contents = ["发送邮件"]
 #
-#     # 创建邮件信息
-#     msg = MIMEMultipart()
-#     # 读取最新报告文件
-#     f = open(newReport,'rb').read()
-#     # 设置邮件主体
-#     mailBody =  MIMEText(f,'html','utf-8')
-#     # 邮件主体放入到消息中
-#     msg.attach(mailBody)
-#     # 邮件标题
-#     msg['Subject'] = Header("《自动化测试报告邮件》",'utf-8')
-#     msg['From'] = sendMail
-#     msg['To'] = receiveMail
-#
-#     # 邮件附件
-#     att = MIMEApplication(f)
-#     att['Content-Type'] = 'application/octet-stream'
-#     att.add_header('Content-Disposition','attachment',filename=report_name)
-#     msg.attach(att)
-#
-#
-#     smtp = SMTP()
-#     # 连接邮箱
-#     smtp.connect('smtp.126.com')
-#     # 邮箱登录
-#     smtp.login(sendMail,sendpswd)
-#     # 发送邮件
-#     smtp.sendmail(sendMail,receiveMail,msg.as_string())
+#     # 附件地址
+#     fujian = [report_path]
+#     # 发送邮件附件
+#     yag.send(receivemail,'《自动化报告》', contents, fujian)
+#     yag.close()
+
+
+
+def sendMail(newReport,report_name):
+    '''
+    ①普通发送邮件
+    :param newReport:
+    :param report_name:
+    :return:
+    '''
+    sendMail = 'zhangchanget@126.com'
+    sendpswd = 'XXX'
+    receiveMail = '943102912@qq.com'
+
+
+    # 创建邮件信息
+    msg = MIMEMultipart()
+    # 读取最新报告文件
+    f = open(newReport,'rb').read()
+    # 设置邮件主体
+    mailBody =  MIMEText(f,'html','utf-8')
+    # 邮件主体放入到消息中
+    msg.attach(mailBody)
+    # 邮件标题
+    msg['Subject'] = Header("《自动化测试报告邮件》",'utf-8')
+    msg['From'] = sendMail
+    msg['To'] = receiveMail
+
+    # 邮件附件
+    att = MIMEApplication(f)
+    att['Content-Type'] = 'application/octet-stream'
+    att.add_header('Content-Disposition','attachment',filename=report_name)
+    msg.attach(att)
+
+
+    smtp = SMTP()
+    # 连接邮箱
+    smtp.connect('smtp.126.com')
+    # 邮箱登录
+    smtp.login(sendMail,sendpswd)
+    # 发送邮件
+    smtp.sendmail(sendMail,receiveMail,msg.as_string())
 
 
 
@@ -121,8 +121,8 @@ if __name__ == '__main__':
 
 
     # 获取最新的report文件
-    # newReport = getNewReport(report_path)
+    newReport = getNewReport(report_path)
 
     # 发送邮件
-    sendMail(report_file_path)
+    sendMail(newReport,"123.html")
 
