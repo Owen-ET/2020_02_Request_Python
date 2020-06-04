@@ -28,29 +28,33 @@ def getNewReport(report_url):
     return newReport
 
 
-# def sendMail(report_path):
-#     '''发送报告'''
-#     sendmail = 'zhangchanget@126.com'
-#     sendpswd = 'XXX'
-#     receivemail = '943102912@qq.com'
-#
-#     # 连接邮箱服务器
-#     yag = yagmail.SMTP(user=sendmail, password=sendpswd, host='smtp.126.com')
-#     # ②发送html邮件正文
-#     # 读取邮件模板
-#     # file_object = open(newReport)
-#     # try:
-#     #     contentsbody = file_object.read()
-#     # finally:
-#     #     file_object.close()
-#     # contents = contentsbody
-#     contents = ["发送邮件"]
-#
-#     # 附件地址
-#     fujian = [report_path]
-#     # 发送邮件附件
-#     yag.send(receivemail,'《自动化报告》', contents, fujian)
-#     yag.close()
+def sendYagMail(report_path):
+    '''发送报告'''
+    sendmail = 'zhangchanget@126.com'
+    sendpswd = 'XXX'
+    receivemail = '943102912@qq.com'
+
+    # 连接邮箱服务器
+    yag = yagmail.SMTP(user=sendmail, password=sendpswd, host='smtp.126.com')
+    # ②发送html邮件正文
+    # 读取邮件模板
+    # file_object = open(newReport)
+    # try:
+    #     contentsbody = file_object.read()
+    # finally:
+    #     file_object.close()
+    # contents = contentsbody
+    contents = ["发送邮件"]
+
+    # 附件地址
+    fujian = [report_path]
+    # 发送邮件附件
+    try:
+        yag.send(receivemail,'《自动化报告》', contents, fujian)
+    except ConnectionResetError:
+        pass
+    yag.close()
+    time.sleep(1)
 
 
 
@@ -124,5 +128,6 @@ if __name__ == '__main__':
     newReport = getNewReport(report_path)
 
     # 发送邮件
-    sendMail(newReport,"123.html")
+    # sendMail(newReport,"123.html")
+    sendYagMail(report_file_path)
 

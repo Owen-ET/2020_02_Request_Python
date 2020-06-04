@@ -8,7 +8,7 @@
 
 import yagmail
 
-yag = yagmail.SMTP(user="zhangchanget@126.com",password="Dayuzhou66",host="smtp.126.com")
+yag = yagmail.SMTP(user="zhangchanget@126.com",password="XXX",host="smtp.126.com")
 
 contents = ["群发邮件测试","看看list里到底都是邮件哪一部分","哈哈哈哈list第三"]
 

@@ -8,10 +8,13 @@ import unittest
 import requests
 import os
 import yaml
+import socket
+import time
 from ddt import ddt, data, file_data, unpack
 
 @ddt
 class TestResquest(unittest.TestCase):
+
 
     def yamlData(self):
         '''获取yaml数据'''
@@ -47,6 +50,7 @@ class TestResquest(unittest.TestCase):
         r = requests.post(url,params=payload,headers=headers).json()
         self.assertEqual(r['data']['records'][0]['stockOutName'],"0506测试仓库")
 
+
     # @unittest.skipIf(2>1,"大于不执行")
     @file_data('./data/case_data.yaml')
     @unpack
@@ -59,6 +63,7 @@ class TestResquest(unittest.TestCase):
         r = requests.get(url,params=payload).json()
         self.assertEqual(r['id'],90)
 
+
     # @unittest.skip("不看")
     def test_request03(self):
         '''无yaml方法'''
@@ -67,6 +72,7 @@ class TestResquest(unittest.TestCase):
         response = requests.request("GET", url, params=querystring).json()
         self.assertEqual(response['name'], 'python')
         self.assertEqual(response['id'], 90)
+
 
 if __name__ == '__main__':
     unittest.main()
