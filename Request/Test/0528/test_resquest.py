@@ -67,8 +67,11 @@ class TestResquest(unittest.TestCase):
     # @unittest.skip("不看")
     def test_request03(self):
         '''无yaml方法'''
-        url = "https://www.v2ex.com/api/nodes/show.json"
-        querystring = {"name": "python"}
+        case = self.yamlData()['case02']
+        url = case['url']
+        querystring = case['payload']
+        # url = "https://www.v2ex.com/api/nodes/show.json"
+        # querystring = {"name": "python"}
         response = requests.request("GET", url, params=querystring).json()
         self.assertEqual(response['name'], 'python')
         self.assertEqual(response['id'], 90)
