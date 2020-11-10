@@ -1,0 +1,52 @@
+addFundsPayOrder:
+  url : http://192.168.10.16:7064/basic/fundsPayOrder/addFundsPayOrder
+  payload:
+    data :
+      '[{
+         "supplierName":"李璐璐",
+         "dxyzm":"1212",
+         "companyType":"1",
+         "companyName":"商品交易平台联调营业执照企业客户测试",
+         "managerCommission":"0",
+         "managerName":"高涵",
+         "manageTypeName":"废钢铁",
+         "manageTypeId":1,
+         "supplierIdCard":"411122199212238240",
+         "companyId":"1324609798704201730",
+         "managerIdCard":"371321199409223916",
+         "managerCommissionTax":"0",
+         "businessOrderId":"FK20201110000017",
+         "supplierPayment":"0.01",
+         "businessOrderType":"1",
+         "supplierPaymentTax":"0",
+         "callbackUrl":"http://192.168.10.16:7002/php/test",
+         "supplierVirtualAccount":"6223093310096165033",
+         "orderCustomer":"钰烨铸造有限公司",
+         "yzmxh":"1111"
+       }]'
+    sign: DWflfmJmP1HZeI8cEs7bg50XRiedRX7XspXPwfpHeX4wAQW4vwHadTllCIYne0eTneO9UdDkyytmEvZIz1gp7UlvfmHGgFCC7RcMg6fEgGG3hNxr6VZTC7n5AQOHf0npSqn0rhaMwcI9Ml83xOpdgz1jQWp3CARk+yZEm1ZWaRk=
+    type: 1
+
+
+
+#params.put("businessOrderId","HK20201026000002");//业务单id
+#params.put("businessOrderType","1");//业务单类型  "1"提前付 "2"付款单
+#params.put("manageTypeId",1); //经验类型  1废钢铁 2:废纸 3:废塑料
+#params.put("manageTypeName","废钢铁");//经营类型名称  1废钢铁 2:废纸 3:废塑料
+#params.put("companyId","3882055230");//回企id
+#params.put("companyName","拾起卖科技有限公司");//回企名称
+#params.put("companyType","2");//回企类型 1:内部 2:外部
+#params.put("managerName","徐立楠外部黄牛"); //经理人名称
+#params.put("managerIdCard","120225199208219785"); //经理人身份证
+#params.put("managerCommission","100"); //佣金 (利润)
+#params.put("managerCommissionTax","0"); //佣金税
+#params.put("managerVirtualAccount","112223454");//经理人虚拟账户
+#params.put("supplierName","徐立楠");//供应商名称(铁户)
+#params.put("supplierIdCard","120225199208215227");//供应商身份证
+#params.put("supplierPayment","1000");//货款
+#params.put("supplierPaymentTax","0");//货款税
+#params.put("supplierVirtualAccount","225587457");//供应商虚拟账户
+#params.put("orderCustomer","钰烨铸造有限公司");//客户 (钢厂)
+#params.put("callbackUrl","http://127.0.0.1:7002/php/test");//回调地址
+#params.put("dxyzm","1212");//短信验证码
+#params.put("yzmxh","1111");//验证码序号
