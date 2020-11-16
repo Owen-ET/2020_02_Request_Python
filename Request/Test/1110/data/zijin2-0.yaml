@@ -1,5 +1,6 @@
 addFundsPayOrder:
-  url : http://192.168.10.16:7064/basic/fundsPayOrder/addFundsPayOrder
+#  url : http://192.168.10.16:7064/basic/fundsPayOrder/addFundsPayOrder
+  url : https://b2bfmsgetway_dev.17mine.cn/basic/fundsPayOrder/addFundsPayOrder
   payload:
     data :
       '[{
@@ -26,6 +27,8 @@ addFundsPayOrder:
        }]'
     sign: DWflfmJmP1HZeI8cEs7bg50XRiedRX7XspXPwfpHeX4wAQW4vwHadTllCIYne0eTneO9UdDkyytmEvZIz1gp7UlvfmHGgFCC7RcMg6fEgGG3hNxr6VZTC7n5AQOHf0npSqn0rhaMwcI9Ml83xOpdgz1jQWp3CARk+yZEm1ZWaRk=
     type: 1
+  headers:
+    Authorization: eyJhbGciOiJIUzI1NiJ9.eyJuZWVkRWRpdCI6LTEsImxvZ2luVGltZSI6MTYwNTQ4ODk1ODI3MCwibG9naW5XYXkiOjEsInVzZXJOYW1lIjoi6LW156OKIiwidXNlcklkIjoiMTMyNzA1ODE2NjAyNTk0OTE4NCIsImxvZ2luU291cmNlIjotMSwiYWNjb3VudCI6IjEzMTAyMDA5NjUwIiwiZXhwIjoxNjA1NTMyMTU4fQ.uWS3ixc3cY_hh3vZ3cohutskXq7ZCSVqNkvtuw2gr9k
 
 
 

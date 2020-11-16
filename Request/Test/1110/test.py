@@ -18,12 +18,13 @@ with open(yamlPath,'r',encoding='utf-8') as file :
 
 yamlData = data['addFundsPayOrder']
 url = yamlData['url']
+headers = yamlData['headers']
 payloadStr = str(yamlData['payload'])
 
 # B2B发送到资金管理的业务单号
-list = ["FK20201110000019","FK20201110000020","FK20201110000021"]
+list = ["FK20201115000001"]
 
 for i in list:
     payloadDict = eval(payloadStr.replace("FK20201110000017",i))
-    r = requests.post(url,params=payloadDict).json()
+    r = requests.post(url,params=payloadDict,headers=headers).json()
     print(r['msg'])
