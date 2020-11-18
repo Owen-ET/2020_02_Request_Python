@@ -2,9 +2,32 @@ addFundsPayOrder:
 #  url : http://192.168.10.16:7064/basic/fundsPayOrder/addFundsPayOrder
   url : https://b2bfmsgetway_dev.17mine.cn/basic/fundsPayOrder/addFundsPayOrder
   payload:
+#    data :
+#      '[{
+#         "supplierName":"李璐璐",
+#         "dxyzm":"1212",
+#         "companyType":"1",
+#         "companyName":"商品交易平台联调营业执照企业客户测试",
+#         "managerCommission":"0",
+#         "managerName":"高涵",
+#         "manageTypeName":"废钢铁",
+#         "manageTypeId":1,
+#         "supplierIdCard":"411122199212238240",
+#         "companyId":"1324642128412069889",
+#         "managerIdCard":"371321199409223916",
+#         "managerCommissionTax":"0",
+#         "businessOrderId":"FK20201110000017",
+#         "supplierPayment":"0.01",
+#         "businessOrderType":"1",
+#         "supplierPaymentTax":"0",
+#         "callbackUrl":"http://192.168.10.16:7002/php/test",
+#         "supplierVirtualAccount":"6223093310096165033",
+#         "orderCustomer":"钰烨铸造有限公司",
+#         "yzmxh":"1111"
+#       }]'
     data :
       '[{
-         "supplierName":"李璐璐",
+         "supplierName":"倪方真",
          "dxyzm":"1212",
          "companyType":"1",
          "companyName":"商品交易平台联调营业执照企业客户测试",
@@ -12,7 +35,7 @@ addFundsPayOrder:
          "managerName":"高涵",
          "manageTypeName":"废钢铁",
          "manageTypeId":1,
-         "supplierIdCard":"411122199212238240",
+         "supplierIdCard":"330225198111043611",
          "companyId":"1324642128412069889",
          "managerIdCard":"371321199409223916",
          "managerCommissionTax":"0",
@@ -21,14 +44,14 @@ addFundsPayOrder:
          "businessOrderType":"1",
          "supplierPaymentTax":"0",
          "callbackUrl":"http://192.168.10.16:7002/php/test",
-         "supplierVirtualAccount":"6223093310096165033",
+         "supplierVirtualAccount":"6223093310096287159",
          "orderCustomer":"钰烨铸造有限公司",
          "yzmxh":"1111"
        }]'
     sign: DWflfmJmP1HZeI8cEs7bg50XRiedRX7XspXPwfpHeX4wAQW4vwHadTllCIYne0eTneO9UdDkyytmEvZIz1gp7UlvfmHGgFCC7RcMg6fEgGG3hNxr6VZTC7n5AQOHf0npSqn0rhaMwcI9Ml83xOpdgz1jQWp3CARk+yZEm1ZWaRk=
     type: 1
   headers:
-    Authorization: eyJhbGciOiJIUzI1NiJ9.eyJuZWVkRWRpdCI6LTEsImxvZ2luVGltZSI6MTYwNTQ4ODk1ODI3MCwibG9naW5XYXkiOjEsInVzZXJOYW1lIjoi6LW156OKIiwidXNlcklkIjoiMTMyNzA1ODE2NjAyNTk0OTE4NCIsImxvZ2luU291cmNlIjotMSwiYWNjb3VudCI6IjEzMTAyMDA5NjUwIiwiZXhwIjoxNjA1NTMyMTU4fQ.uWS3ixc3cY_hh3vZ3cohutskXq7ZCSVqNkvtuw2gr9k
+    Authorization: eyJhbGciOiJIUzI1NiJ9.eyJuZWVkRWRpdCI6LTEsImxvZ2luVGltZSI6MTYwNTY2MTI0MzE0MCwibG9naW5XYXkiOjEsInVzZXJOYW1lIjoiMTExIiwidXNlcklkIjoiMTMyODIxNzM4NDY0NDkwNzAwOCIsImxvZ2luU291cmNlIjotMSwiYWNjb3VudCI6IjEzNjExMTExMTExIiwiZXhwIjoxNjA1NzA0NDQzfQ.oI2K1kuLKZlDcl0BZDZBpGkdfxn5s9OInU1uaGdx55M
 
 
 

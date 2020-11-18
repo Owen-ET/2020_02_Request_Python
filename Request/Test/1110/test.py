@@ -22,7 +22,7 @@ headers = yamlData['headers']
 payloadStr = str(yamlData['payload'])
 
 # B2B发送到资金管理的业务单号
-list = ["FK20201115000001"]
+list = ["ZC20201118000002"]
 
 for i in list:
     payloadDict = eval(payloadStr.replace("FK20201110000017",i))
